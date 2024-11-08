@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Address and MAC Address Lookup</title>
+    <style>
+      /* Reusing the green header and footer for consistency */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e8f5e9; /* Light greenish background */
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      header {
+        background-color: #4caf50; /* Darker green header */
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+
+      header nav {
+        margin-top: 10px;
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      header nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      header nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #4caf50; /* Same dark green footer */
+        color: white;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 28px;
+        color: #2c6e49;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .section h3 {
+        font-size: 24px;
+        color: #333;
+      }
+
+      .section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .section ul li {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .alert {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f8d7da;
+        color: #721c24;
+        border-radius: 5px;
+      }
+
+      .mt-4 {
+        margin-top: 40px;
+      }
+
+      footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>IP Address and MAC Address Lookup</h1>
+      <nav>
+        <ul>
+          <li><a href="/dashboard">Dasboard</a></li>
+          <li><a href="/">Mac Finder</a></li>
+          <li><a href="/subnetting">Subnetting</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- Section for IP Address Classes & Subnetting -->
+      <div id="subnetting" class="section">
+        <h2>IP Address Classes & Subnetting</h2>
+        <h3>IP Address Classes</h3>
+        <ul>
+          <li>
+            <strong>Class A:</strong> 0.0.0.0 to 127.255.255.255, Default Subnet
+            Mask: 255.0.0.0 (or /8), Supports 16 million hosts.
+          </li>
+          <li>
+            <strong>Class B:</strong> 128.0.0.0 to 191.255.255.255, Default
+            Subnet Mask: 255.255.0.0 (or /16), Supports 65,536 hosts.
+          </li>
+          <li>
+            <strong>Class C:</strong> 192.0.0.0 to 223.255.255.255, Default
+            Subnet Mask: 255.255.255.0 (or /24), Supports 254 hosts.
+          </li>
+          <li>
+            <strong>Class D:</strong> 224.0.0.0 to 239.255.255.255, Used for
+            multicast.
+          </li>
+          <li>
+            <strong>Class E:</strong> 240.0.0.0 to 255.255.255.255, Reserved for
+            experimental use.
+          </li>
+        </ul>
+
+        <h3>Subnetting Calculation Example</h3>
+        <p>
+          To calculate the subnet mask, let’s consider an example where we have:
+        </p>
+        <ul>
+          <li><strong>IP Address:</strong> 192.168.1.10</li>
+          <li><strong>Subnet Mask:</strong> 255.255.255.0 (/24)</li>
+        </ul>
+        <p>
+          In this case, the network address is <strong>192.168.1.0</strong> and
+          the broadcast address is <strong>192.168.1.255</strong>. The valid
+          hosts are in the range of <strong>192.168.1.1</strong> to
+          <strong>192.168.1.254</strong>.
+        </p>
+        <h3>CIDR Notation</h3>
+        <ul>
+          <li>
+            <strong>/24</strong> represents a subnet mask of 255.255.255.0
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section for MAC Address Lookup -->
+      <div id="mac-identifier" class="section">
+        <h2>MAC Address Lookup</h2>
+        <h3>What is a MAC Address?</h3>
+        <p>
+          A <strong>MAC (Media Access Control)</strong> address is a unique
+          identifier assigned to the network interface card (NIC) of a device,
+          used for communications within a network segment. A MAC address is a
+          48-bit address typically represented in hexadecimal format, like
+          <strong>00:14:22:01:23:45</strong>.
+        </p>
+
+        <h3>MAC Address Calculation</h3>
+        <p>
+          MAC addresses are primarily used to identify hardware devices on a
+          network. The first 3 bytes (24 bits) represent the Organizationally
+          Unique Identifier (OUI), assigned to the manufacturer of the NIC. The
+          remaining 3 bytes represent a unique serial number for each device
+          manufactured by that company.
+        </p>
+
+        <h3>Example of MAC Address Breakdown</h3>
+        <ul>
+          <li><strong>MAC Address:</strong> 00:14:22:01:23:45</li>
+          <li><strong>OUI:</strong> 00:14:22 (assigned to the manufacturer)</li>
+          <li>
+            <strong>Unique Identifier:</strong> 01:23:45 (unique to the device)
+          </li>
+        </ul>
+        <h3>How to Identify a Device from MAC Address</h3>
+        <p>
+          By looking up the OUI in a public database (like IEEE), you can
+          determine the manufacturer of a device just by its MAC address.
+        </p>
+        <p>
+          Example: The OUI <strong>00:14:22</strong> is registered to the
+          company <strong>Intel Corporation</strong>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Sumanth. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

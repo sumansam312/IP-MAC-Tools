@@ -1,0 +1,4 @@
+python 3.13
+Django==4.2.5
+requests==2.30.0
+pip 24.2 
