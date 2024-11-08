@@ -81,6 +81,9 @@ Efficient and easy-to-use network management tools for calculating subnets and i
    ```
    Now, the app should be accessible at [http://127.0.0.1:8000](http://127.0.0.1:8000) in your web browser.
 
+   ![image](https://github.com/user-attachments/assets/a4ad4da0-d5c1-4511-9b92-dc3ddc8d0475)
+
+
 ---
 
 ## How to Use
